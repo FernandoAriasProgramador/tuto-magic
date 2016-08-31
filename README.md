@@ -15,4 +15,4 @@ npm start
 
 LISTO! si no les funciona me vale
 
-PD: Cambien la cadena de conexion
+PD: Cambien la cadena de conexion y borren la carpeta .vs

@@ -1,0 +1,15 @@
+<md-component layout="row" layout-padding flex class="animated fadeIn md-whiteframe-3dp" layout-align="center center">
+    <md-switch ng-model="vm.data.do" aria-label="Echo" ng-change="vm.onTodoChange()" flex="10">
+    </md-switch>
+    <h3 flex class="text-uppercase text-primary">{{vm.data.name}}</h4>
+
+    <span flex="10">
+      {{vm.data.dateInit | date:'shortDate'}}
+    </span>
+    <span flex="10">
+      {{vm.data.dateEnd | date:'shortDate'}}
+    </span>
+    <md-button class=" md-raised md-trash" ng-click="vm.onTodoDelete()" flex="1" aria-label="boton">
+        <md-icon md-font-icon="fa fa-trash"></md-icon>
+    </md-button>
+</md-component>

@@ -1,0 +1,23 @@
+<md-content layout="column" layout-padding flex class="md-whiteframe-3dp">
+
+    <h1 class="text-center md-primary">TODO LIST</h1>
+
+    <div class="" flex layout="row">
+
+
+        <md-input-container class="md-block" layout="row" flex>
+
+            <label>Agregar nuevo Todo</label>
+            <input type="text" flex name="name" value="" ng-model="vm.newTodo" ng-keydown="vm.addTodo($event)" />
+        </md-input-container>
+        <span flex></span>
+        <md-switch ng-model="vm.showCompleted" aria-label="Show Complete" ng-change="vm.onTodoChange()" flex>
+          Mostrar Completados
+        </md-switch>
+    </div>
+
+    <todo ng-repeat="t in vm.todos | orderBy: '-dateInit' | filter:vm.showCompleted" data="t"
+    on-update="vm.updateTodo(data)"
+    on-delete="vm.deleteTodo(id)"></todo>
+
+</md-content>

@@ -14,3 +14,5 @@ npm start
 5-ejecuten el proyecto tuto.webapi desde el visual
 
 LISTO! si no les funciona me vale
+
+PD: Cambien la cadena de conexion
